@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#EA1818</color>
+    <color name="main">#FCE9E9</color>
+    <color name="red_time">#FFA9A9</color>
+    <color name="text_time">#FB1111</color>
+    <color name="btn_huy">#D6D0D0</color>
+    <color name="colorPrimary">#5D4037</color>
+    <color name="colorPrimaryDark">#5D4037</color>
+    <color name="colorAccent">#CACACA</color>
+    <color name="textColorPrimary">#5D4037</color>
+    <color name="textColorSecondary">#555555</color>
+    <color name="textColorAccent">#CACACA</color>
+    <color name="textColorHeading">#3C3C3C</color>
+    <color name="textColorLink">#032172</color>
+    <color name="textColorDescription">#7C7C7C</color>
+    <color name="bgMainColor">#F0F0F0</color>
+    <color name="bgFilter">#EFEBE9</color>
+    <color name="transparent">#00000000</color>
+    <color name="green">#43936C</color>
+    <color name="blue">#3F51B5</color>
+</resources>

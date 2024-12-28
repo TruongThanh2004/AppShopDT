@@ -1,0 +1,98 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/draw_layout">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#7CC6F6"
+            android:elevation="4dp"
+            app:title="Menu"
+            app:titleTextColor="#000000" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:background="#f5f5f5">
+
+
+            <LinearLayout
+                android:id="@+id/bannerContainer"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/bannerImage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/banner2"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Banner cửa hàng điện thoại" />
+
+                <ImageView
+                    android:id="@+id/bannerImage2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/banner"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Banner cửa hàng điện thoại thứ hai" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chào mừng đến với cửa hàng điện thoại!"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@id/bannerContainer"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/topProductsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top sản phẩm nổi bật"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@id/welcomeText"
+                app:layout_constraintStart_toStartOf="parent" />
+            <ListView
+                android:id="@+id/lvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/topProductsText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:scrollbars="vertical" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
